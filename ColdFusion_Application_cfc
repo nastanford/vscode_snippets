@@ -3,10 +3,37 @@ Create a application.cfc blank starter template.
 
 ```
 {
-  "application": {
+    "cfapplication": {
     "prefix": "application",
-    "body": "component{\n\n\tthis.name = \"ApplicationName\";\n\tthis.applicationTimeout = createTimeSpan( 30, 0, 0, 0 ); //30 days\n\tthis.sessionStorage = true;\n\tthis.sessionTimeout = createTimeSpan( 0, 0, 60, 0 ); // 1 hour \n\n\tfunction onApplicationStart(){}\n\tfunction onApplicationEnd( struct applicationScope ) {}\n\n\tfunction onSessionStart() {}\n\tfunction onSessionEnd( struct sessionScope, struct applicationScope ) {}\n\n\tfunction onRequestStart( string targetPage ) {}\n\tfunction onRequest( string targetPage ) {\n\t\tinclude arguments.targetPage;\n\t}\n\tfunction onRequestEnd() {}\n\tfunction onCFCRequest( cfcname, method, struct args) { \n\t\t    return;\n\t} \n\n\tfunction onError( any Exception, string EventName ) {}\n\tfunction onAbort( required string targetPage ) {} \n\tfunction onMissingTemplate( required string targetPage ) {}\n\n}"
-  }
+    "body": [
+      "component{",
+        "  ",
+        "  this.name = \"ApplicationName\";",
+        "  this.applicationTimeout = createTimeSpan( 30, 0, 0, 0 ); //30 days",
+        "  this.sessionStorage = true;",
+        "  this.sessionTimeout = createTimeSpan( 0, 0, 60, 0 ); // 1 hour ",
+        "  ",
+        "  function onApplicationStart(){}",
+        "  function onApplicationEnd( struct applicationScope ) {}",
+        "  ",
+        "  function onSessionStart() {}",
+        "  function onSessionEnd( struct sessionScope, struct applicationScope ) {}",
+        "  ",
+        "  function onRequestStart( string targetPage ) {}",
+        "  function onRequest( string targetPage ) {",
+        "    include arguments.targetPage;",
+        "  }",
+        "  function onRequestEnd() {}",
+        "  function onCFCRequest( cfcname, method, struct args) { ",
+        "    return;",
+        "  } ",
+        "  ",
+        "  function onError( any Exception, string EventName ) {}",
+        "  function onAbort( required string targetPage ) {} ",
+        "  function onMissingTemplate( required string targetPage ) {}",
+        "  ",      
+      "}"
+    ]
 }
 
 ```
