@@ -1,0 +1,72 @@
+{
+  "ColdFusion Applicaton.cfc template": {
+    "prefix": "app",
+    "body": [
+      "component{",
+      "",
+      "  this.name = \"${1:Application Name}\";",
+      "  this.applicationTimeout = createTimeSpan( 30, 0, 0, 0 ); //30 days",
+      "  this.sessionStorage = true;",
+      "  this.sessionTimeout = createTimeSpan( 0, 0, 60, 0 ); // 1 hour ",
+      "  this.datasource = \"${2:Datasource Name}\";",
+      "",
+      "  function onApplicationStart(){}",
+      "  function onApplicationEnd( struct applicationScope ) {}",
+      "",
+      "  function onSessionStart() {}",
+      "  function onSessionEnd( struct sessionScope, struct applicationScope ) {}",
+      "",
+      "  function onRequestStart( string targetPage ) {}",
+      "  function onRequest( string targetPage ) {",
+      "    include arguments.targetPage;",
+      "  }",
+      "  function onRequestEnd() {}",
+      "  function onCFCRequest( cfcname, method, struct args) { ",
+      "        return;",
+      "  } ",
+      "",
+      "  function onError( any Exception, string EventName ) {}",
+      "  function onAbort( required string targetPage ) {} ",
+      "  function onMissingTemplate( required string targetPage ) {}",
+      "",
+      "}",
+      "",
+      ""
+    ],
+    "description": "ColdFusion Applicaton.cfc template"
+  },
+
+  "HTML5: Boilerplate": {
+    "prefix": "doc",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"en\">",
+      "<head>",
+      "  <meta charset=\"UTF-8\">",
+      "  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+      "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+      "  <title>${1:Page Title}</title>",
+      "</head>",
+      "<body>",
+      "",
+      "</body>",
+      "</html>",
+      ""
+    ],
+    "description": "This is an starter template for creating a HTML5 Boilerplate"
+  },
+  "Laravel: Default View ": {
+    "prefix": "lview",
+    "body": [
+      "@extends('layouts.default')",
+      "@section('content')",
+      "<div class=\"container-fluid ms-2\">",
+      "  <div id=\"main\" class=\"row\">",
+      "    View_Name",
+      "  </div>",
+      "</div>",
+      "@stop"
+    ],
+    "description": "This is an starter template for creating a view in Laravel"
+  }
+}
