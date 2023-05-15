@@ -8,7 +8,8 @@ Create a application.cfc blank starter template.
     "body": [
       "component{",
         "  ",
-        "  this.name = \"ApplicationName\";",
+        "  this.name = \"${1:Application_Name}\";",
+        "  this.datasource = \"${2:Datasource_Name}\";",
         "  this.applicationTimeout = createTimeSpan( 30, 0, 0, 0 ); //30 days",
         "  this.sessionStorage = true;",
         "  this.sessionTimeout = createTimeSpan( 0, 0, 60, 0 ); // 1 hour ",
