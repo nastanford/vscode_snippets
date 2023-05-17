@@ -1,6 +1,6 @@
 {
-  "ColdFusion Applicaton.cfc template": {
-    "prefix": "app",
+  "CF Applicaton.cfc template": {
+    "prefix": "cfapp",
     "body": [
       "component{",
       "",
@@ -55,18 +55,5 @@
     ],
     "description": "This is an starter template for creating a HTML5 Boilerplate"
   },
-  "Laravel: Default View ": {
-    "prefix": "lview",
-    "body": [
-      "@extends('layouts.default')",
-      "@section('content')",
-      "<div class=\"container-fluid ms-2\">",
-      "  <div id=\"main\" class=\"row\">",
-      "    View_Name",
-      "  </div>",
-      "</div>",
-      "@stop"
-    ],
-    "description": "This is an starter template for creating a view in Laravel"
-  }
+
 }
